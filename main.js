@@ -1,5 +1,5 @@
 const DEFAULT_SETTINGS = {
-    blurAmount: 3,
+    blurAmount: 5,
     edgeBlurAmount: 10,
 };
 
