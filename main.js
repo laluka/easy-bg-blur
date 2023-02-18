@@ -1,5 +1,5 @@
 const DEFAULT_SETTINGS = {
-    blurAmount: 5,
+    blurAmount: 10,
     edgeBlurAmount: 10,
 };
 
@@ -55,10 +55,11 @@ const doFrame = async (now, metadata) => {
         if (metadata) {
             lastSegmentation = metadata.presentationTime;
         }
+
         segmentation = await model.segmentPerson(video, {
             flipHorizontal: false,
             internalResolution: 0.5,
-            segmentationThreshold: 0.7,
+            segmentationThreshold: 0.95,
             maxDetections: 1,
         });
     }
